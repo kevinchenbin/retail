@@ -1,0 +1,44 @@
+//---------------------------------------------------------------------------
+
+#ifndef TeacherFDDetailH
+#define TeacherFDDetailH
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include "DBGridEh.hpp"
+#include "GridsEh.hpp"
+#include <ADODB.hpp>
+#include <DB.hpp>
+#include "frxClass.hpp"
+#include "frxDBSet.hpp"
+//---------------------------------------------------------------------------
+class Tfrmfddetail : public TForm
+{
+__published:	// IDE-managed Components
+	TDBGridEh *DBGridEh1;
+	TADOQuery *aq;
+	TDataSource *DataSource1;
+	TfrxReport *frxfddetail;
+	TfrxDBDataset *frxDBDataset1;
+	TButton *Button1;
+	TButton *Button2;
+	void __fastcall FormShow(TObject *Sender);
+	void __fastcall frxfddetailGetValue(const UnicodeString VarName, Variant &Value);
+
+private:	// User declarations
+public:		// User declarations
+	__fastcall Tfrmfddetail(TComponent* Owner);
+	TADOConnection *fcon;
+	int tearchid;
+	AnsiString begintime;
+	AnsiString endtime;
+	void loaddata();
+	void printorpriver(int atype);
+
+};
+//---------------------------------------------------------------------------
+extern PACKAGE Tfrmfddetail *frmfddetail;
+//---------------------------------------------------------------------------
+#endif

@@ -1,0 +1,37 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unittongyidiscount.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "RzEdit"
+#pragma resource "*.dfm"
+Tfrmtongyidiscount *frmtongyidiscount;
+//---------------------------------------------------------------------------
+__fastcall Tfrmtongyidiscount::Tfrmtongyidiscount(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+float Tfrmtongyidiscount::getdiscount()
+{
+
+
+    return nedit->Value;
+
+
+
+}
+//---------------------------------------------------------------------------
+void __fastcall Tfrmtongyidiscount::sbokClick(TObject *Sender)
+{
+  actionex=true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tfrmtongyidiscount::sbcancelClick(TObject *Sender)
+{
+   actionex = false;
+}
+//---------------------------------------------------------------------------

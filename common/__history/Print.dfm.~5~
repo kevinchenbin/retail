@@ -1,0 +1,112 @@
+object frmPrint: TfrmPrint
+  Left = 0
+  Top = 0
+  Caption = 'frmPrint'
+  ClientHeight = 129
+  ClientWidth = 214
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object RvSystem1: TRvSystem
+    TitleSetup = 'Output Options'
+    TitleStatus = 'Report Status'
+    TitlePreview = 'Report Preview'
+    SystemFiler.StatusFormat = 'Generating page %p'
+    SystemPreview.ZoomFactor = 100.000000000000000000
+    SystemPrinter.ScaleX = 100.000000000000000000
+    SystemPrinter.ScaleY = 100.000000000000000000
+    SystemPrinter.StatusFormat = 'Printing page %p'
+    SystemPrinter.Title = 'Rave Report'
+    SystemPrinter.UnitsFactor = 1.000000000000000000
+    Left = 112
+    Top = 16
+  end
+  object prjretail: TRvProject
+    Engine = RvSystem1
+    Left = 40
+    Top = 16
+  end
+  object conRVretail: TRvDataSetConnection
+    RuntimeVisibility = rtDeveloper
+    DataSet = aquerybs
+    Left = 112
+    Top = 72
+  end
+  object aquerybs: TADOQuery
+    Parameters = <>
+    Left = 168
+    Top = 24
+  end
+  object frxretail: TfrxReport
+    Version = '4.7.2'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = #39044#35774
+    PrintOptions.PrintOnSheet = 0
+    PrintOptions.ShowDialog = False
+    ReportOptions.CreateDate = 41050.432745416700000000
+    ReportOptions.LastChange = 41151.401877870400000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    ShowProgress = False
+    Left = 40
+    Top = 64
+    Datasets = <>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page2: TfrxReportPage
+      PaperWidth = 65.000000000000000000
+      PaperHeight = 474.000000000000000000
+      PaperSize = 256
+      BottomMargin = 3.000000000000000000
+      object Memo1: TfrxMemoView
+        Left = 3.779530000000000000
+        Top = 3.779530000000000000
+        Width = 239.370233330000000000
+        Height = 1783.938160000000000000
+        ShowHint = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+    end
+  end
+  object frxre: TfrxReport
+    Version = '4.7.2'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = #39044#35774
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 41217.994504189820000000
+    ReportOptions.LastChange = 41217.994504189820000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    ShowProgress = False
+    StoreInDFM = False
+    Left = 88
+    Top = 64
+  end
+end

@@ -1,0 +1,23 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "UnitInputmessage.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+Tfrminputmessage *frminputmessage;
+//---------------------------------------------------------------------------
+__fastcall Tfrminputmessage::Tfrminputmessage(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+void Tfrminputmessage::settitle(AnsiString capt2,AnsiString capt1)
+{
+
+
+}
+//---------------------------------------------------------------------------void Tfrminputmessage::settitle(AnsiString capt2,AnsiString capt1)
+
+//---------------------------------------------------------------------------

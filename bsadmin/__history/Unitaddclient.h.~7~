@@ -1,0 +1,32 @@
+//---------------------------------------------------------------------------
+
+#ifndef UnitaddclientH
+#define UnitaddclientH
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <ADODB.hpp>
+#include <DB.hpp>
+//---------------------------------------------------------------------------
+class Tfrmaddclient : public TForm
+{
+__published:	// IDE-managed Components
+	TEdit *edclient;
+	TComboBox *cbclient;
+	TLabel *Label1;
+	TButton *Button1;
+	TButton *Button2;
+	TADOConnection *ADOConnection1;
+	TADOQuery *aq;
+private:	// User declarations
+public:		// User declarations
+	__fastcall Tfrmaddclient(TComponent* Owner,TADOConnection *con,int stgid);
+
+
+};
+//---------------------------------------------------------------------------
+extern PACKAGE Tfrmaddclient *frmaddclient;
+//---------------------------------------------------------------------------
+#endif

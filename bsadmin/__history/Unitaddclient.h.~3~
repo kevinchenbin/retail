@@ -1,0 +1,26 @@
+//---------------------------------------------------------------------------
+
+#ifndef UnitaddclientH
+#define UnitaddclientH
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+//---------------------------------------------------------------------------
+class Tfrmaddclient : public TForm
+{
+__published:	// IDE-managed Components
+	TEdit *edclient;
+	TComboBox *cbsupplier;
+	TLabel *Label1;
+	TButton *Button1;
+	TButton *Button2;
+private:	// User declarations
+public:		// User declarations
+	__fastcall Tfrmaddclient(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE Tfrmaddclient *frmaddclient;
+//---------------------------------------------------------------------------
+#endif

@@ -1,0 +1,32 @@
+//---------------------------------------------------------------------------
+
+#ifndef UnittongyidiscountH
+#define UnittongyidiscountH
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <Buttons.hpp>
+#include "RzEdit.hpp"
+#include <Mask.hpp>
+//---------------------------------------------------------------------------
+class Tfrmtongyidiscount : public TForm
+{
+__published:	// IDE-managed Components
+	TSpeedButton *sbok;
+	TSpeedButton *sbcancel;
+	TLabel *Label1;
+	TRzNumericEdit *nedit;
+	void __fastcall sbokClick(TObject *Sender);
+	void __fastcall sbcancelClick(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall Tfrmtongyidiscount(TComponent* Owner);
+        float getdiscount();
+        bool actionex;
+};
+//---------------------------------------------------------------------------
+extern PACKAGE Tfrmtongyidiscount *frmtongyidiscount;
+//---------------------------------------------------------------------------
+#endif
